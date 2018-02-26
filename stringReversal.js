@@ -37,6 +37,17 @@ function reverseStringThree(str){
     return revString;
 }
 
+// string reversal method #4
+
+function reverseStringFour(str){
+    let revString ='';
+    for(let char of str){
+        revString = char + revString;
+    }
+
+    return revString;
+}
+
 // Call Function
 let output = reverseStringShort('JavaScript');
 
@@ -47,3 +58,6 @@ console.log('method #2 -> ' + output);
 
 output = reverseStringThree('JavaScript');
 console.log('method #3 -> ' + output);
+
+output = reverseStringFour('JavaScript');
+console.log('method #4 -> ' + output);
