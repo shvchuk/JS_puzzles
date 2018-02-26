@@ -15,8 +15,21 @@ function reverseStringShort(str){
     return str.split('').reverse().join('');
 }
 
+// string reversal method #2
+
+function reverseStringTwo(str){
+    let revString ='';
+    for(let i = str.length - 1; i >= 0 ; i--){
+        revString = revString + str[i];
+    }
+
+    return revString;
+}
 
 // Call Function
-const output = reverseStringShort('JavaScript');
+let output = reverseStringShort('JavaScript');
 
-console.log(output);
+console.log('method #1 -> ' + output);
+
+output = reverseStringTwo('JavaScript');
+console.log('method #2 -> ' + output);
