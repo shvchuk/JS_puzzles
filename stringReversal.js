@@ -26,6 +26,17 @@ function reverseStringTwo(str){
     return revString;
 }
 
+// string reversal method #3
+
+function reverseStringThree(str){
+    let revString = '';
+    for(let i = 0; i <= str.length -1; i++){
+        revString = str[i] + revString;
+    }
+
+    return revString;
+}
+
 // Call Function
 let output = reverseStringShort('JavaScript');
 
@@ -33,3 +44,6 @@ console.log('method #1 -> ' + output);
 
 output = reverseStringTwo('JavaScript');
 console.log('method #2 -> ' + output);
+
+output = reverseStringThree('JavaScript');
+console.log('method #3 -> ' + output);
