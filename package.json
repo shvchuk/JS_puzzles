@@ -1,0 +1,19 @@
+{
+  "name": "js_puzzles",
+  "version": "1.0.0",
+  "description": "js simple excercises",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shvchuk/JS_puzzles.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shvchuk/JS_puzzles/issues"
+  },
+  "homepage": "https://github.com/shvchuk/JS_puzzles#readme"
+}
