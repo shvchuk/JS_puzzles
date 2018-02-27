@@ -2,6 +2,8 @@
 // Return a string in reverse
 // reverseString('hello') === 'olleh'
 
+// method #1
+
 function reverseString(str){
     const strArr = str.split('');
     strArr.reverse();
@@ -9,7 +11,7 @@ function reverseString(str){
     return strArr.join('');
 }
 
-// Reverse string short method
+// Reverse string short method #1
 
 function reverseStringShort(str){
     return str.split('').reverse().join('');
@@ -48,6 +50,38 @@ function reverseStringFour(str){
     return revString;
 }
 
+// string reversal method #5
+
+function reverseStringFive(str){
+    let revString = '';
+    str.split('').forEach(function(char) {
+        revString = char + revString;
+    });
+    return revString;
+}
+
+// string reversal method #5 modified
+
+function reverseStringFiveMod(str){
+    let revString = '';
+    str.split('').forEach( char => revString = char + revString);
+    return revString;
+}
+
+// string reversal method #6
+
+function reverseStringSix(str){
+    return str.split('').reduce(function(revString, char){
+        return char + revString;
+    }, '')
+}
+
+// string reversal method #6 modified
+
+function reverseStringSixMod(str){
+    return str.split('').reduce((revString, char) => char + revString, '');
+}
+
 // Call Function
 let output = reverseStringShort('JavaScript');
 
@@ -61,3 +95,16 @@ console.log('method #3 -> ' + output);
 
 output = reverseStringFour('JavaScript');
 console.log('method #4 -> ' + output);
+
+output = reverseStringFive('JavaScript');
+console.log('method #5 -> ' + output);
+
+output = reverseStringFiveMod('JavaScript');
+console.log('method #5 mod -> ' + output);
+
+output = reverseStringSix('JavaScript');
+console.log('method #6 -> ' + output);
+
+output = reverseStringSixMod('JavaScript');
+console.log('method #6 mod -> ' + output);
+
