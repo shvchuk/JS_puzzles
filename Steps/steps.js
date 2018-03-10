@@ -7,7 +7,18 @@
 //     '##'
 
 function steps(n){
-    
+    let printedString = '';
+
+    for(let i = 2; i <= n; i++){
+        printedString += " ";
+    }
+
+    let char = "#";
+
+    for(let i = 1; i <= n; i++){
+        console.log(char + printedString.slice(i-1));
+        char += "#";
+    }
 }
 
 module.exports = steps;
