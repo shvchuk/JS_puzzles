@@ -25,7 +25,31 @@ function matrix(n) {
       results[startRow][i] = counter;
       counter++;
     }
+    startRow++;
+
+    // right column
+    for (let i = startRow; i <= endRow; i++) {
+      results[i][endColumn] = counter;
+      counter++;
+    }
+    endColumn--;
+
+    // bottom row
+    for (let i = endColumn; i >= startColumn; i--) {
+      results[endRow][i] = counter;
+      counter++;
+    }
+    endRow--;
+
+    // start column
+    for (let i = endRow; i >= startRow; i--) {
+      results[i][startColumn] = counter;
+      counter++;
+    }
+    startColumn++;
   }
+
+  return results;
 }
 
 module.exports = matrix;
