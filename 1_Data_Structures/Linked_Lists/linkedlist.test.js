@@ -18,3 +18,46 @@ describe("A Node", () => {
     expect(node.next).toEqual("b");
   });
 });
+
+describe("Insert First", () => {
+  test("appends a node to the start of the list", () => {
+    const l = new List();
+    l.insertFirst(1);
+    expect(l.head.data).toEqual(1);
+    l.insertFirst(2);
+    expect(l.head.data).toEqual(2);
+  });
+});
+
+describe("Size", () => {
+  test("returns the number of items in the linked list", () => {
+    const l = new List();
+    expect(l.size()).toEqual(0);
+    l.insertFirst(1);
+    l.insertFirst(1);
+    l.insertFirst(1);
+    l.insertFirst(1);
+    l.insertFirst(1);
+    expect(l.size()).toEqual(5);
+  });
+});
+
+describe("GetFirst", () => {
+  test("returns the first element", () => {
+    const l = new List();
+    l.insertFirst(1);
+    expect(l.getFirst().data).toEqual(1);
+    l.insertFirst(2);
+    expect(l.getFirst().data).toEqual(2);
+  });
+});
+
+describe("GetLast", () => {
+  test("returns the last element", () => {
+    const l = new List();
+    l.insertFirst(2);
+    expect(l.getLast()).toEqual({ data: 2, next: null });
+    l.insertFirst(1);
+    expect(l.getLast()).toEqual({ data: 2, next: null });
+  });
+});
